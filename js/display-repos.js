@@ -15,9 +15,11 @@ DisplayRepos.prototype.getRepos = function(username){
     // } else {
       for(var key of response){
         $('#results').append('<li><span class="repo-info">Repo Name:</span> ' + key.name + '</li>');
+        $('#results').append('<ul><li><span class="repo-info">Repo Creation Date:</span> ' + moment(key.created_at).format('MMMM Do YYYY') + '</li>');
         if(key.description){
-          $('#results').append('<ul><li><span class="repo-info">Repo Description:</span> ' + key.description + '</li></ul>');
+          $('#results').append('<ul><li><span class="repo-info">Repo Description:</span> ' + key.description + '</li>');
         }
+        $('#results').append('</ul>');
       }
     // }
   }).fail(function(error){
