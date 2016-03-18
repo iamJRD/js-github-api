@@ -6,6 +6,6 @@ $(document).ready(function(event){
     event.preventDefault();
     var username = $('#username').val();
     $('#username').val("");
-    console.log(username);
+    $('#inputtedUsername').text("You submitted " + username + ". Here is a list of their repositories:");
   });
 });
