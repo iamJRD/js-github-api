@@ -7,6 +7,7 @@ var DisplayRepos = function(){
 
 DisplayRepos.prototype.getRepos = function(username){
   $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey).then(function(response){
+    $('#results').text('');
     for(var key of response){
       $('#results').append('<li>Repo Name: ' + key.name + '</li>');
       if(key.description){
