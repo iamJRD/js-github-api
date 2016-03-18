@@ -1,11 +1,6 @@
-var apiKey = require('./../.env').apiKey;
-// var getRepos = require('./../get-repos-interface.js').getRepos;
+var UserInput = require('./../js/user-input.js').UserInput;
+var app = new UserInput();
 
-$(document).ready(function(event){
-  $('#githubUsername').submit(function(event){
-    event.preventDefault();
-    var username = $('#username').val();
-    $('#username').val("");
-    $('#inputtedUsername').text("You submitted " + username + ". Here is a list of their repositories:");
-  });
+$(function(){
+  app.gather();
 });
