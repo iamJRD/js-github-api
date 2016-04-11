@@ -17,7 +17,6 @@ This app uses a form to take user input and access GitHub's API to search for a 
 5. Within the project directory run:<br>
        ```$ npm init ```<br>
        ```$ npm install ```<br>
-       ```$ bower init ```<br>
        ```$ bower install ```<br>
        ```$ gulp build ```<br>
        ```$ gulp serve ```<br>
